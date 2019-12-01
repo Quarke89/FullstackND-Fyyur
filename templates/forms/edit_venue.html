@@ -26,7 +26,11 @@
       <div class="form-group">
           <label for="phone">Phone</label>
           {{ form.phone(class_ = 'form-control', placeholder='xxx-xxx-xxxx', autofocus = true) }}
-        </div>
+      </div>
+      <div class="form-group">
+          <label for="image_link">Image Link</label>
+          {{ form.image_link(class_ = 'form-control', placeholder='http://', autofocus = true) }}
+      </div>
       <div class="form-group">
         <label for="genres">Genres</label>
         <small>Ctrl+Click to select multiple</small>
@@ -35,7 +39,19 @@
       <div class="form-group">
           <label for="genres">Facebook Link</label>
           {{ form.facebook_link(class_ = 'form-control', placeholder='http://', id=form.state, autofocus = true) }}
-        </div>
+      </div>
+      <div class="form-group">
+          <label for="website_link">Website Link</label>
+          {{ form.website_link(class_ = 'form-control', placeholder='http://', id=form.state, autofocus=true) }}
+      </div>
+      <div class="form-group">
+        {{ form.seeking_talent_check(class_ = 'form-check-input') }}
+        <label for="seeking_talent_check">Seeking Talent</label>
+      </div>
+      <div class="form-group">
+        <label for="seeking_talent_description">Description</label>
+        {{ form.seeking_talent_description(class_ = 'form-control') }}
+      </div>
       <input type="submit" value="Edit Venue" class="btn btn-primary btn-lg btn-block">
     </form>
   </div>
